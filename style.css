@@ -143,10 +143,19 @@ body {
   margin: 2em 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    align-content: center;
+  }
+  .container__figura {
+    width: 80%;
+  }
   .container--principal {
     background-image: none;
-    grid-template-columns: 1fr;
+  }
+  .dispositivos__lista {
+    flex-wrap: wrap;
   }
   .rodape__lista {
     flex-direction: column;
