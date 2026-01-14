@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap');
 
 :root {
   --cor-texto: #ffffff;
   --cor-texto-menor: #c0c0c0;
-  --cor-botao: #167bf7;
-  --cor-botao-efeito: color-mix(in oklab, var(--cor-botao), black 20%);
+  --cor-botao: #053E85;
+  --cor-botao-efeito: color-mix(in oklab, var(--cor-botao), white 10%);
   --cor-fundo: #00030c;
 
   --fonte-principal: 'Inter', sans-serif;
@@ -96,6 +95,9 @@ body {
   background-color: var(--cor-botao-efeito);
 }
 .dispositivos {
+  height: 100vh;
+  height: 100dvh;
+  align-content: center;
   text-align: center;
 }
 .dispositivos__titulo {
@@ -116,8 +118,9 @@ body {
   font-size: clamp(1em, 5vw, 32px);
 }
 .rodape {
-  align-content: center;
-  margin: 4em 7% 0;
+  background-color: var(--cor-botao);
+  align-content: flex-end;
+  padding: 2em 7% 0;
   text-align: center;
 }
 .rodape__logo {
@@ -129,8 +132,11 @@ body {
   gap: 1em;
   list-style-type: none;
 }
+.rodape__lista__link {
+  padding: 5px;
+}
 .rodape__lista__link:hover {
-  color: var(--cor-botao);
+  color: var(--cor-fundo);
   text-decoration: underline;
 }
 .rodape__lista__link:active {
@@ -143,7 +149,7 @@ body {
   margin: 2em 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .container {
     grid-template-columns: 1fr;
     align-content: center;
@@ -155,7 +161,10 @@ body {
     background-image: none;
   }
   .dispositivos__lista {
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .dispositivos__img {
+    max-width: 200px;
   }
   .rodape__lista {
     flex-direction: column;
